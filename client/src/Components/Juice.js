@@ -2,21 +2,21 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Axios from "axios";// Axios makes it easy to send asynchronous HTTP requests to REST endpoints and perform CRUD operations. It can be used in plain JavaScript or with a library such as Vue or React
 
-export const Products = () => {
+export const Juice = () => {
   const [productList, setProductList] = useState([]);
   useEffect(() => {
     //When the page loads it fetches the data
-    Axios.get("localhost:3000/productsdb").then((result) => {
+    Axios.get("localhost:3000/juicedb").then((result) => {
       setProductList(result.data);
     });
   }, []);
   const productListLowToHigh = () => {
-    Axios.get("localhost:3000/productsdb1").then((response) => {
+    Axios.get("localhost:3000/juicedb1").then((response) => {
       setProductList(response.data);
     });
   };
   const productListHighToLow = () => {
-    Axios.get("localhost:3000/productsdb2").then((result) => {
+    Axios.get("localhost:3000/juicedb2").then((result) => {
       setProductList(result.data);
     });
   };
@@ -31,7 +31,7 @@ export const Products = () => {
   };
   return (
     <div>
-      <section class="text">
+      <section className="text">
         <h2>Shop Our Different Flavors</h2>
       </section>
       <section className="filter">
@@ -44,11 +44,11 @@ export const Products = () => {
           </select>
         </div>
       </section>
-      <section className="products">
+      <section className="juices">
         {productList.map((value) => {
           return (
-            <div className="product">
-              <div className="product-image">
+            <div className="juice">
+              <div className="juice-image">
                 <img src={value.image} />
               </div>
               <p> {value.title}</p>

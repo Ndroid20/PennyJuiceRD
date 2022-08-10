@@ -1,16 +1,20 @@
+
+import  { Juice } from './Components/Juice'
 import './App.css';
-import Navbar from './components/navbar';
-import Footer from './components/footer';
-import Home from './pages/home';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
+
 
 
 function App() {
   return (
     <div className="App">
+
     <Navbar />
-    <Home />
-    
+
+    <Juice />
     <Footer />
+
     </div>
   );
 }
