@@ -8,10 +8,11 @@ app.use(express.json())
 app.use(cors())
 
 const db = mysql.createConnection({
-    user: 'root',
-    host: 'localhost',
+    user: 'admin',
+    host: 'pennyjuicerd.cghuhuwevmha.us-east-1.rds.amazonaws.com',
+    // host: 'localhost',
     password: 'password',
-    database: 'pennyjuice',
+    database: 'pennyjuicerds',
 });
 db.connect((error) => {
     if(error){
@@ -21,7 +22,7 @@ db.connect((error) => {
 })
 
 app.get('/juicedb', (req,res) =>{
-    db.query('SELECT * FROM pennyjuice', (err,response) =>{
+    db.query('SELECT * FROM pennyjuicerds.Juice;', (err,response) =>{
         if(err){
             throw error
         } else{
@@ -32,25 +33,6 @@ app.get('/juicedb', (req,res) =>{
 
 app.get('/juicedb')
 app.listen(3001, () => {
-    console.log("Running on Port 3001")
+    console.log("Running on Port 3000")
 });
-
-// app.get('/juicedb1', (req,res) =>{
-//     db.query('SELECT * FROM pennyjuice ORDER BY price ASC', (err,response) =>{
-//         if(err){
-//             throw error
-//         } else{
-//             res.send(response)
-//         }
-//     })
-// } )
-
-// app.get('/juicedb2', (req,res) =>{
-//     db.query('SELECT * FROM pennyjuice ORDER BY price DESC', (err,response) =>{
-//         if(err){
-//             throw error
-//         } else{
-//             res.send(response)
-//         }
-//     })
-// } )
+app.post
