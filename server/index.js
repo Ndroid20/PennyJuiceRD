@@ -15,24 +15,39 @@ const db = mysql.createConnection({
     database: 'pennyjuicerds',
 });
 db.connect((error) => {
-    if(error){
+    if (error) {
         throw error
     }
     console.log('Database Connected')
 })
 
-app.get('/juicedb', (req,res) =>{
-    db.query('SELECT * FROM pennyjuicerds.Juice;', (err,response) =>{
-        if(err){
+app.get('/juicedb', (req, res) => {
+    db.query('SELECT * FROM pennyjuicerds.Juice;', (err, response) => {
+        if (err) {
             throw error
-        } else{
+        } else {
             res.send(response)
         }
     })
-} )
+})
 
 app.get('/juicedb')
 app.listen(3001, () => {
     console.log("Running on Port 3000")
 });
-app.post
+
+app.post('/create', (req, res) => {
+    const firstName = req.body.firstName;
+    const lastName = req.body.lastName;
+    const email = req.body.email;
+    const message = req.body.message;
+
+    db.query('INSERT INTO `pennyjuicerds.contactinfo` (first_name, last_name, email, message) VALUES (?,?,?,?)', [firstName, lastName, email, message], (err, result) => {
+        if (err) {
+            console.log(err)
+        } else {
+            res.send('Values Inserted')
+        }
+    }
+    );
+});
