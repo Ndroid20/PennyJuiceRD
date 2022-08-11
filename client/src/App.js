@@ -1,12 +1,12 @@
 import { Juice } from './Components/Juice';
 import './App.css';
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
-import About from './Components/About';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import About from './components/About';
 
 import ImageSlider from './components/ImageSlider';
 import { SliderData } from './components/SliderData';
-import Home from './pages/home';
+import Home from './Pages/home';
 
 function App() {
   return (
