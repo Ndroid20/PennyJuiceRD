@@ -6,7 +6,7 @@ export const Juice = () => {
   const [productList, setProductList] = useState([]);
   useEffect(() => {
     //When the page loads it fetches the data
-    Axios.get("localhost:3000/juicedb").then((result) => {
+    Axios.get("/juicedb").then((result) => {
       setProductList(result.data);
     });
   }, []);
