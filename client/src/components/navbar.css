@@ -24,6 +24,7 @@ a {
 
 .link-list {
   display: flex;
+  padding: 0;
 }
 
 nav {
@@ -63,4 +64,8 @@ nav {
 .link__hover-effect:hover:after {
   left: 0;
   width: 100%;
+}
+.logo {
+  display: flex;
+  justify-content: center;
 }
