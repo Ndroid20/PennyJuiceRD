@@ -1,0 +1,74 @@
+.about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+    url('https://img.freepik.com/premium-vector/kawaii-seamless-background-with-ice-cream-juice_6997-1609.jpg?w=2000');
+  min-height: calc(100vh - 384px);
+  background-color: #cccccc;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  font-size: 25px;
+  font-family: 'poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  height: 80vh;
+}
+
+.about h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.about section {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.btn {
+  background-color: orange;
+  border: none;
+  width: 50%;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+#aboutimg {
+  width: 400px;
+  height: 400px;
+  padding: 70px 0;
+}
+
+.contactbtn {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: 'poppins', sans-serif;
+}
+
+@media (max-width: 959px) {
+  .about {
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #aboutimg {
+    height: 400px;
+  }
+
+  .about section {
+    width: 90%;
+  }
+}
