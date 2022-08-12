@@ -9,9 +9,7 @@ import Row from "react-bootstrap/Row";
 
 const Juice = () => {
   const [data, setData] = useState([]);
-  useEffect(() => {
-    loadData();
-  }, []);
+
   const loadData = async () => {
     return await Axios
       .get("http://localhost:3001/juicedb")
@@ -22,13 +20,13 @@ const Juice = () => {
   return (
     <>
       <div className="container">
-      <h1>Shop Our Different Flavors</h1>
+        <h1>Shop Our Different Flavors</h1>
         <Row xs={1} md={2} className="g-4">
           {data.map((item, index) => (
             <Col>
               <Card>
                 <Card.Title>
-                    <h2>{item.flavor}</h2>
+                  <h2>{item.flavor}</h2>
                 </Card.Title>
                 <Card.Img
                   variant="top"
