@@ -1,19 +1,21 @@
-const express = require("express");
+import express, { json } from "express";
 const app = express();
-const mysql = require("mysql");
-const cors = require("cors");
-const bodyparser = require("body-parser");
+import { createConnection } from "mysql";
+import cors from "cors";
+import bodyparser from "body-parser";
 
-app.use(express.json());
+app.use(json());
 app.use(cors());
+
+
 
 const db = mysql.createConnection({
     user: 'admin',
     host: 'pennyjuicerd.cghuhuwevmha.us-east-1.rds.amazonaws.com',
     port: 3306,
-    // host: 'localhost',
     password: 'password',
     database: 'pennyjuicerds',
+
 });
 // axios.get('localhost:3000/juicedb',{crossdomain: true})
 db.connect((error) => {
