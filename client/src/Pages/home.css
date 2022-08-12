@@ -121,7 +121,7 @@
 }
 
 
-.card__background {
+/* .card__background {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -142,7 +142,7 @@
 
 .card__footer {
     border-top: 1px solid black;
-}
+} */
 
 
 /* SLIDER STYLING GOES BELOWWWWW */

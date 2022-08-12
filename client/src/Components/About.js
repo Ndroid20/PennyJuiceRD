@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   const imgAbout =
-    'https://pm1.narvii.com/6492/2f28365bdd30872f7f794cbd7847d9821089827d_hq.jpg';
+    'https://images.pexels.com/photos/5119598/pexels-photo-5119598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
   return (
     <div className="about">
       <img id="aboutimg" src={imgAbout} />
