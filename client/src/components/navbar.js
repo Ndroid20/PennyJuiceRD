@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './navbar.css';
 
 function Navbar() {
@@ -16,7 +17,7 @@ function Navbar() {
         <i className="fa-solid fa-cart-shopping "></i>
 
         <nav>
-          <ul className="link-list">
+          {/* <ul className="link-list">
             <li className="listing">
               <a
                 href="#"
@@ -47,7 +48,13 @@ function Navbar() {
                 CONTACT
               </a>
             </li>
-          </ul>
+          </ul> */}
+          <ul className="link-list">
+    <li className="listing"><Link className="link__hover-effect link__hover-effect--black" to='/Home'>HOME</Link></li>
+      <li className="listing"><Link className="link__hover-effect link__hover-effect--black" to='/Shop'>SHOP</Link></li>
+      <li className="listing"><Link className="link__hover-effect link__hover-effect--black" to='/Contact'>CONTACT</Link></li>
+      <li className="listing"><Link className="link__hover-effect link__hover-effect--black" to='/About'>ABOUT</Link></li>
+    </ul>
         </nav>
       </div>
     </div>

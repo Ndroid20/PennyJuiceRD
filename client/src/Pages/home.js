@@ -2,6 +2,7 @@ import React from 'react';
 import './home.css';
 import {motion} from 'framer-motion';
 import { useRef, useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import images from "../assets/homeimages";
 
 
@@ -22,7 +23,11 @@ function Home() {
         <div className='insider__portion'>
           <h1>WELCOME TO <span className='red'>PENNY JUICE</span></h1>
           <p>Things are always better when you kick off your day with Penny Juice. It just makes <span className='copper'>cents</span></p>
-          <button className='upper__button'>Get Started!</button>
+          <button className='upper__button'>
+          <Link to='/Shop'>Get Started!</Link>
+          </button>
+
+          
         </div>
       </div>
     <div className='lower__section'>
