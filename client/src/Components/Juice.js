@@ -9,12 +9,19 @@ import "./Juice.css";
 const Juice = () => {
   const [data, setData] = useState([]);
 
+  useEffect(() => {
+    loadData();
+  }, []);
+
   const loadData = async () => {
-    return await Axios.get("http://localhost:3001/juicedb")
+
+    return await Axios
+      .get("https://pennyjuicedb.herokuapp.com/juicedb")
+
       .then((response) => setData(response.data))
       .catch((err) => console.log(err));
   };
-  //console.log(“data”, data)
+  console.log('data', data)
   return (
     <>
       <h1 className='juice_title'>Shop Our Different Flavors</h1>

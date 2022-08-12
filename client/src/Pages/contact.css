@@ -118,10 +118,34 @@ button {
     }
 
     .container .contact-info {
-        margin: 40px;
+        margin: 20px;
     }
 
     .container .contact-info .contact-form {
         width: 100%;
     }
+
+    .container .contact-info .box .icon {
+        min-width: 30px;
+        height: 30px;
+        margin-top: 8px;
+        margin-left: 0px;
+       
+    }
+
+    .container .contact-info .box .text {
+        display: flex;
+        margin-left: 8px;
+        font-size: 12px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .container .contact-info .box p {
+        margin-top: 30;
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+    }
 }
+
