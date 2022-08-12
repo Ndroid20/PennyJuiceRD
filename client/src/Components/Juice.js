@@ -1,6 +1,6 @@
-// import React from 'react';
-// import { useState, useEffect } from 'react';
-// import Axios from 'axios'; // Axios makes it easy to send asynchronous HTTP requests to REST endpoints and perform CRUD operations. It can be used in plain JavaScript or with a library such as Vue or React
+import React from 'react';
+import { useState, useEffect } from 'react';
+import Axios from 'axios'; // Axios makes it easy to send asynchronous HTTP requests to REST endpoints and perform CRUD operations. It can be used in plain JavaScript or with a library such as Vue or React
 
 
 export const Juice = () => {
