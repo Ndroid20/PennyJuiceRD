@@ -21,7 +21,7 @@ const Juice = () => {
   //console.log(“data”, data)
   return (
     <>
-      <div className="container">
+      <div className="juice">
       <h1>Shop Our Different Flavors</h1>
         <Row xs={1} md={2} className="g-4">
           {data.map((item, index) => (
