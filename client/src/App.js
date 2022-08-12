@@ -1,4 +1,4 @@
-import { Juice } from './Components/Juice';
+import { Juice } from './components/Juice';
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -15,7 +15,7 @@ function App() {
       <Home />
       <ImageSlider slide={SliderData} />
       <About />
-
+      <Juice />
       <Footer />
     </div>
   );

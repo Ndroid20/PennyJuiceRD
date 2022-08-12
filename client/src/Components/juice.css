@@ -1,0 +1,21 @@
+.juices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 1400px;
+
+}
+
+.text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 40px;
+}
+
+.juices-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
