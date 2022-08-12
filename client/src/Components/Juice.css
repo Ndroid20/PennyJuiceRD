@@ -1,19 +1,26 @@
+.juice_container{
+    width: 100%;
+}
+.juice_wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1440px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    justify-content: center;
+    gap: 1rem;
+}
+.juice_card{
+width: 30%;
+padding-left: 10px;
+text-align: center;
+border: 2px solid;
+background-color: #F3E7EB;
+}
 
-.juices {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    max-width: 1400px;
+
+.juice_title{
+    text-align: center;
 }
-.text {
-    display: flex;
-    margin-left: 20px;
-    font-size: 40px;
-}
-.juices-wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
+

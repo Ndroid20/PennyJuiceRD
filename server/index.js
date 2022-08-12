@@ -1,11 +1,11 @@
-import express, { json } from "express";
+import express, { json } from 'express';
 const app = express();
-import { createConnection } from "mysql";
-import cors from "cors";
-import bodyparser from "body-parser";
+import { createConnection } from 'mysql';
+import cors from 'cors';
+import bodyparser from 'body-parser';
 
-app.use(json());
-app.use(cors());
+app.use(json())
+app.use(cors())
 
 
 
@@ -63,3 +63,4 @@ app.post("/create", (req, res) => {
         }
     });
 })
+

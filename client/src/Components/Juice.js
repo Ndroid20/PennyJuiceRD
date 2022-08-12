@@ -1,11 +1,10 @@
-
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React from "react";
+import { useState, useEffect } from "react";
 import Axios from "axios";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-
+import "./Juice.css";
 
 const Juice = () => {
   const [data, setData] = useState([]);
@@ -15,41 +14,30 @@ const Juice = () => {
   }, []);
 
   const loadData = async () => {
+
     return await Axios
       .get("https://pennyjuicedb.herokuapp.com/juicedb")
+
       .then((response) => setData(response.data))
       .catch((err) => console.log(err));
   };
   console.log('data', data)
   return (
     <>
-
-
-      <div className="container">
-        <h1>Shop Our Different Flavors</h1>
-
-        <Row xs={1} md={2} className="g-4">
+      <h1 className='juice_title'>Shop Our Different Flavors</h1>
+      <section className="juice_container">
+        <div className="juice_wrapper">
           {data.map((item, index) => (
-            <Col>
-              <Card>
-                <Card.Title>
-                  <h2>{item.flavor}</h2>
-                </Card.Title>
-                <Card.Img
-                  variant="top"
-                  className="juice-image"
-                  src={item.image}
-                />
-                <Card.Body>
-                  <Card.Text>
-                    <h2 className="price">${item.price}/gallon</h2>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
+            <div className='juice_card'>
+              <h2>{item.flavor}</h2>
+
+              <img variant="top" className="juice-image" src={item.image} />
+
+              <p className="price">${item.price}/gallon</p>
+            </div>
           ))}
-        </Row>
-      </div>
+        </div>
+      </section>
     </>
   );
 };
