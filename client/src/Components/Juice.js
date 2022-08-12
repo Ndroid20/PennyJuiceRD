@@ -1,10 +1,7 @@
 
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Axios from 'axios'; // Axios makes it easy to send asynchronous HTTP requests to REST endpoints and perform CRUD operations. It can be used in plain JavaScript or with a library such as Vue or React
-
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import Axios from "axios";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -16,7 +13,7 @@ const Juice = () => {
     loadData();
   }, []);
   const loadData = async () => {
-    return await axios
+    return await Axios
       .get("http://localhost:3001/juicedb")
       .then((response) => setData(response.data))
       .catch((err) => console.log(err));
@@ -24,7 +21,7 @@ const Juice = () => {
   //console.log(“data”, data)
   return (
     <>
-      <div class="container">
+      <div className="container">
       <h1>Shop Our Different Flavors</h1>
         <Row xs={1} md={2} className="g-4">
           {data.map((item, index) => (
