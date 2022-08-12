@@ -1,10 +1,10 @@
 
-import { Juice } from './Components/Juice';
+// import { Juice } from './Components/Juice';
 
 
 // import { Juice } from './Components/Juice';
 
-import  Juice  from './Components/Juice';
+import Juice from './Components/Juice';
 
 
 import './App.css';
@@ -23,13 +23,13 @@ import Contact from './Pages/Contact';
 function App() {
   return (
     <div className="App">
-      
+
       <Navbar />
       <Routes>
         <Route path='/Home' exact="true" element={<Home />} />
-        {/* <Route path='/Shop' exact="true" element={<Juice />} /> */}
+        <Route path='/Shop' exact="true" element={<Juice />} />
         <Route path='/Contact' exact="true" element={<Contact />} />
-        <Route path='/About' exact="true" element={<About />} /> 
+        <Route path='/About' exact="true" element={<About />} />
       </Routes>
       <Footer />
       {/* <Home /> */}
@@ -37,7 +37,7 @@ function App() {
       {/* <About /> */}
 
 
-     
+
     </div >
   );
 }
