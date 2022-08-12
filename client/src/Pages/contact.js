@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { HiOutlineLocationMarker, HiOutlineMail, HiOutlinePhone } from "react-icons/hi"
 import './contact.css';
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -7,6 +7,7 @@ import Axios from 'axios';
 
 
 const Contact = () => {
+    const [isSubmit, setIsSubmit] = useState(false);
 
     const initialValues = {
         firstName: "",
@@ -26,8 +27,15 @@ const Contact = () => {
     const onSubmit = (data) => {
         Axios.post("http://localhost:3001/create", data).then((response) => {
             console.log("Success");
+            setIsSubmit(true);
         })
     };
+
+    useEffect(() => {
+        if (isSubmit) {
+            console.log('true');
+        }
+    }, []);
 
     return (
         <>
@@ -68,7 +76,6 @@ const Contact = () => {
                             initialValues={initialValues}
                             onSubmit={onSubmit}
                             validationSchema={validationSchema}>
-                            {/* <div id='container'> */}
                             <Form className="formContainer">
                                 <h1 className='contact-caption'>Get in touch!</h1>
                                 <label>First Name: </label>
@@ -92,9 +99,14 @@ const Contact = () => {
                                 />
                                 <ErrorMessage className='error' name="message" component="span" />
 
-                                <button type="submit">Send</button>
+                                <button type="submit" onClick={onSubmit}>Send</button>
+
+                                {isSubmit ? (
+                                    <div className="submit-message">Message sent!</div>
+                                ) : (
+                                    <div className='submit-message'></div>
+                                )}
                             </Form>
-                            {/* </div> */}
                         </Formik>
                     </div>
                 </div>
