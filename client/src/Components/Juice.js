@@ -12,7 +12,7 @@ const Juice = () => {
 
   const loadData = async () => {
     return await Axios
-      .get("http://localhost:3001/juicedb")
+      .get("https://pennyjuicedb.herokuapp.com/juicedb")
       .then((response) => setData(response.data))
       .catch((err) => console.log(err));
   };
