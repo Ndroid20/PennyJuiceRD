@@ -10,13 +10,17 @@ import Row from "react-bootstrap/Row";
 const Juice = () => {
   const [data, setData] = useState([]);
 
+  useEffect(() => {
+    loadData();
+  }, []);
+
   const loadData = async () => {
     return await Axios
       .get("https://pennyjuicedb.herokuapp.com/juicedb")
       .then((response) => setData(response.data))
       .catch((err) => console.log(err));
   };
-  //console.log(“data”, data)
+  console.log('data', data)
   return (
     <>
 
