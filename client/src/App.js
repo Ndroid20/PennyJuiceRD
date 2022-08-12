@@ -1,12 +1,6 @@
 
-import { Juice } from './Components/Juice';
-
-
 // import { Juice } from './Components/Juice';
-
 import  Juice  from './Components/Juice';
-
-
 import './App.css';
 import Navbar from './Components/Navbar';
 import { Routes, Route, Router } from 'react-router';
@@ -14,9 +8,7 @@ import Footer from './Components/Footer';
 import About from './Components/About';
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
-// import ImageSlider from './Components/ImageSlider';
-// import { SliderData } from './Components/SliderData';
-// import Home from './pages/Home';
+
 
 
 
