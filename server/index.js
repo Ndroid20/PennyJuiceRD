@@ -10,10 +10,10 @@ app.use(cors())
 const db = mysql.createConnection({
     user: 'admin',
     host: 'pennyjuicerd.cghuhuwevmha.us-east-1.rds.amazonaws.com',
-    // host: 'localhost',
     password: 'password',
     database: 'pennyjuicerds',
 });
+// axios.get('localhost:3000/juicedb',{crossdomain: true})
 db.connect((error) => {
     if(error){
         throw error
@@ -30,8 +30,11 @@ app.get('/juicedb', (req,res) =>{
         }
     })
 } )
-
-app.get('/juicedb')
+app.use(function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+});
 app.listen(3001, () => {
     console.log("Running on Port 3000")
 });
