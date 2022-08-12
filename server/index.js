@@ -42,7 +42,7 @@ app.post('/create', (req, res) => {
     const email = req.body.email;
     const message = req.body.message;
 
-    db.query('INSERT INTO `pennyjuicerds.contactinfo` (first_name, last_name, email, message) VALUES (?,?,?,?)', [firstName, lastName, email, message], (err, result) => {
+    db.query('INSERT INTO contactinfo (first_name, last_name, email, message) VALUES (?,?,?,?)', [firstName, lastName, email, message], (err, result) => {
         if (err) {
             console.log(err)
         } else {
