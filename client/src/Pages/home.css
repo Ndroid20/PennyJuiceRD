@@ -127,6 +127,7 @@
     flex-wrap: wrap;
     background-color: black;
     padding: 30px;
+    border: black 2px solid;
 }
 
 .card {
