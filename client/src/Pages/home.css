@@ -18,8 +18,7 @@
 .insider__portion {
     position: absolute;
     left: 5%;
-    top: 33%;
-    
+    top: 33%; 
     margin-top: -82px;
     display: flex;
     flex-direction: column;
@@ -46,9 +45,10 @@
 }
 
 .item {
-    min-height: 14rem;
+    max-height: 100%;
     min-width: 22rem;
-    padding: 40px;
+    padding: 10px;
+
 
 }
 
@@ -227,14 +227,16 @@
     font-size: 25px;
     font-family: 'poppins', sans-serif;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
  }
 
  .insider__lower--portion {
     position: absolute;
+    padding: 0px;
     left: 5%;
-    top: 8%;
+    top: 1%;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -262,13 +264,13 @@
 
  .carousel__button {
     position: absolute;
-    top: 80%;
-    left: 5%;
+    top: 90%;
+    left: 1%;
     display: flex;
     justify-content: center;
     font-size: 20px;
     padding: 12px;
-    width: 320px;
+    width: 220px;
     background-color: #B5E2F4;
     border-radius: 10px;
  }
@@ -286,11 +288,9 @@
 
  @media screen and (max-width: 700px) {
     .upper-portion{
-        background-image: linear-gradient( rgba(0, 0, 0, 0.264), rgba(0, 0, 1, 0.915)), url("https://images.unsplash.com/photo-1627260111100-e789fd2c0059?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80");
         height: calc(100vh - 100vw);
-        background-color: #fff;
+     
         background-size: cover;
-        background-repeat: no-repeat;
         background-position: center;
         position: relative;
         text-align: center;
@@ -298,6 +298,7 @@
         font-size: 15px;
         font-family: 'poppins', sans-serif;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
     }
@@ -306,7 +307,6 @@
         position: absolute;
         left: 3%;
         top: 16%;
-        
         margin-top: -82px;
         display: flex;
         flex-direction: column;
@@ -315,7 +315,7 @@
     
     .insider__portion h1 {
         font-family: 'Poppins', sans-serif;
-        font-size: 45px;
+        font-size: 25px;
         text-align: center;
         font-weight: 700;
         margin-top: 140px;
@@ -323,7 +323,9 @@
     }
     
     .insider__portion p {
-        font-size: 26px;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 24px;
         text-align: left;
         width: 454px;
         
@@ -386,9 +388,14 @@
      }
     
      .lower__section p {
-        font-size: 22px;
+        font-size: 1px;
         width: 100%;
     
      }
+
+     /* .homebox {
+        width:100vw;
+        height: 100vh;
+     } */
     
  }
