@@ -1,10 +1,15 @@
 
+
+// import { Juice } from './Components/Juice';
+// import  Juice  from './Components/Juice';
+
 // import { Juice } from './Components/Juice';
 
 
 // import { Juice } from './Components/Juice';
 
 import Juice from './Components/Juice';
+
 
 
 import './App.css';
@@ -16,7 +21,6 @@ import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 // import ImageSlider from './Components/ImageSlider';
 // import { SliderData } from './Components/SliderData';
-// import Home from './pages/Home';
 
 
 
