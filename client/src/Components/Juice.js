@@ -8,9 +8,7 @@ import "./Juice.css";
 
 const Juice = () => {
   const [data, setData] = useState([]);
-  useEffect(() => {
-    loadData();
-  }, []);
+
   const loadData = async () => {
     return await Axios.get("http://localhost:3001/juicedb")
       .then((response) => setData(response.data))

@@ -8,6 +8,7 @@ import images from "../assets/homeimages";
 
 
 
+
 function Home() {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
@@ -22,7 +23,7 @@ function Home() {
       <div className='upper-portion'>
         <div className='insider__portion'>
           <h1>WELCOME TO <span className='red'>PENNY JUICE</span></h1>
-          <p>Things are always better when you kick off your day with Penny Juice. It just makes <span className='copper'>cents</span></p>
+          <p>Things are always better when you kick off your day with Penny Juice. It just makes <span className='copper'>cents!</span></p>
           <button className='upper__button'>
           <Link to='/Shop'>Get Started!</Link>
           </button>
@@ -52,9 +53,9 @@ function Home() {
           })}
       </motion.div>
     </motion.div>
-    <button className='carousel__button'>Check it out !</button>
+    <button className='carousel__button'>
+    <Link to='/Shop'>Check It!</Link></button>
    
-
     </div>
     
     </section>

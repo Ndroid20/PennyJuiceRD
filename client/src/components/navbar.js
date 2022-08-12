@@ -17,38 +17,6 @@ function Navbar() {
         <i className="fa-solid fa-cart-shopping "></i>
 
         <nav>
-          {/* <ul className="link-list">
-            <li className="listing">
-              <a
-                href="#"
-                className="link__hover-effect link__hover-effect--black"
-              ></a>
-            </li>
-            <li className="listing">
-              <a
-                href="#"
-                className="link__hover-effect link__hover-effect--black"
-              >
-                ABOUT
-              </a>
-            </li>
-            <li className="listing">
-              <a
-                href="#"
-                className="link__hover-effect link__hover-effect--black"
-              >
-                SHOP
-              </a>
-            </li>
-            <li className="listing">
-              <a
-                href="#"
-                className="link__hover-effect link__hover-effect--black"
-              >
-                CONTACT
-              </a>
-            </li>
-          </ul> */}
           <ul className="link-list">
     <li className="listing"><Link className="link__hover-effect link__hover-effect--black" to='/Home'>HOME</Link></li>
       <li className="listing"><Link className="link__hover-effect link__hover-effect--black" to='/Shop'>SHOP</Link></li>
