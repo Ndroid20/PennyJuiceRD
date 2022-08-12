@@ -11,6 +11,7 @@
 }
 
 .container {
+    border: 1px;
     background-color: rgba(0, 0, 0, 0.36);
     width: 100%;
     display: flex;

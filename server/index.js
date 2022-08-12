@@ -10,6 +10,7 @@ app.use(cors())
 const db = mysql.createConnection({
     user: 'admin',
     host: 'pennyjuicerd.cghuhuwevmha.us-east-1.rds.amazonaws.com',
+    port: 3306,
     // host: 'localhost',
     password: 'password',
     database: 'pennyjuicerds',
@@ -22,7 +23,7 @@ db.connect((error) => {
 })
 
 app.get('/juicedb', (req, res) => {
-    db.query('SELECT * FROM pennyjuicerds.Juice;', (err, response) => {
+    db.query('SELECT * FROM Juice;', (err, response) => {
         if (err) {
             throw error
         } else {
@@ -31,9 +32,8 @@ app.get('/juicedb', (req, res) => {
     })
 })
 
-app.get('/juicedb')
-app.listen(3001, () => {
-    console.log("Running on Port 3000")
+app.listen(process.env.PORT || 3001, () => {
+    console.log('listening on port ${PORT}')
 });
 
 app.post('/create', (req, res) => {

@@ -7,7 +7,7 @@ export const Juice = () => {
   const [productList, setProductList] = useState([]);
   useEffect(() => {
     //When the page loads it fetches the data
-    Axios.get("/juicedb").then((result) => {
+    Axios.get("https://pennyjuicedb.herokuapp.com/juicedb").then((result) => {
       setProductList(result.data);
     });
   }, []);
