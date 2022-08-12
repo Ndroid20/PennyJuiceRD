@@ -14,13 +14,10 @@ const About = () => {
           {' '}
           Here at PennyJuice, we strive to provide the best quality juice and
           best prices! Not only do we beat competitors, we also give back to the
-          community by serving the best juicers in town!
+          community by serving the best juices in town!
         </p>
-        <button type="button" className="btn btn-warning">
-          Contact Us!
-          {/* <Link className="contactbtn" to="/contact">
-            Contact Us
-          </Link> */}
+          <button type="button" className="btn btn-warning">
+<Link to='/Contact'>Contact Us!</Link>
         </button>
       </section>
     </div>
