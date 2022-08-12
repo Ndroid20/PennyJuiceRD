@@ -1,37 +1,50 @@
+
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Axios from 'axios'; // Axios makes it easy to send asynchronous HTTP requests to REST endpoints and perform CRUD operations. It can be used in plain JavaScript or with a library such as Vue or React
+import Axios from "axios";
+import Card from "react-bootstrap/Card";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 
-export const Juice = () => {
-  const [productList, setProductList] = useState([]);
-  useEffect(() => {
-    //When the page loads it fetches the data
-    Axios.get("https://pennyjuicedb.herokuapp.com/juicedb").then((result) => {
-      setProductList(result.data);
-    });
-  }, []);
+const Juice = () => {
+  const [data, setData] = useState([]);
 
+  const loadData = async () => {
+    return await Axios
+      .get("http://localhost:3001/juicedb")
+      .then((response) => setData(response.data))
+      .catch((err) => console.log(err));
+  };
+  //console.log(“data”, data)
   return (
-    <div>
-      <section className="text">
-        <h2>Shop Our Different Flavors</h2>
-      </section>
-      <section className="juices">
-        {productList.map((value) => {
-          return (
-            <div className="juice">
-              <div className="juice-image">
-                <img src={value.image} />
-              </div>
-              <p> {value.title}</p>
-              <p> {value.description}</p>
-              <p> ${value.price} per gallon</p>
-            </div>
-          );
-        })}
-      </section>
-    </div>
+    <>
+      <div className="container">
+        <h1>Shop Our Different Flavors</h1>
+        <Row xs={1} md={2} className="g-4">
+          {data.map((item, index) => (
+            <Col>
+              <Card>
+                <Card.Title>
+                  <h2>{item.flavor}</h2>
+                </Card.Title>
+                <Card.Img
+                  variant="top"
+                  className="juice-image"
+                  src={item.image}
+                />
+                <Card.Body>
+                  <Card.Text>
+                    <h2 className="price">${item.price}/gallon</h2>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </div>
+    </>
   );
 };
 
+export default Juice;
