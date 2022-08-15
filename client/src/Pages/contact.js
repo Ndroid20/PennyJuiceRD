@@ -25,7 +25,7 @@ const Contact = () => {
 
     // submitting info to mysql
     const onSubmit = (data) => {
-        Axios.post("http://localhost:3001/create", data).then((response) => {
+        Axios.post("https://pennyjuicedb.herokuapp.com/create", data).then((response) => {
             console.log("Success");
             setIsSubmit(true);
         })
